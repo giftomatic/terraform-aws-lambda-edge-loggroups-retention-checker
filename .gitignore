@@ -40,3 +40,4 @@ terraform.rc
 .ruff_cache
 .venv
 loggroup-dist.zip
+dist.zip
