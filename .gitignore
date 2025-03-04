@@ -41,3 +41,4 @@ terraform.rc
 .venv
 loggroup-dist.zip
 dist.zip
+.DS_Store

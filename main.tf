@@ -22,9 +22,15 @@ variable "schedule_expression" {
   default     = "rate(7 days)"
 }
 
+variable "lambda_zip_output_path" {
+  type        = string
+  description = "The path to the output zip file"
+  default     = "dist/dist.zip"
+}
+
 data "archive_file" "lambda" {
   source_file = "${path.module}/loggroup_check.py"
-  output_path = "${path.module}/dist.zip"
+  output_path = var.lambda_zip_output_path
   type        = "zip"
 }
 
